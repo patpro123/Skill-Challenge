@@ -1,0 +1,91 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 48px 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.score {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.scoreNum {
+  font-size: 72px;
+  font-weight: 800;
+  color: #6366f1;
+  line-height: 1;
+}
+
+.scoreDen {
+  font-size: 32px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.scoreLabel {
+  font-size: 20px;
+  color: #6b7280;
+  margin-left: 8px;
+}
+
+.breakdown {
+  display: flex;
+  gap: 12px;
+}
+
+.pill {
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pillGreen {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.pillRed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btnPrimary {
+  background: #6366f1;
+  color: #fff;
+}
+
+.btnSecondary {
+  background: #f3f4f6;
+  color: #374151;
+}
