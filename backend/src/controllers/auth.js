@@ -11,15 +11,15 @@ function signToken(user) {
 }
 
 async function register(req, res) {
-  const { email, password } = req.body;
+  const { name, email, password } = req.body;
   if (!email || !password) {
     return res.status(400).json({ error: 'email and password are required' });
   }
   try {
     const password_hash = await bcrypt.hash(password, 12);
     const { rows } = await pool.query(
-      'INSERT INTO users (email, password_hash) VALUES ($1, $2) RETURNING id, email, created_at',
-      [email, password_hash]
+      'INSERT INTO users (name, email, password_hash) VALUES ($1, $2, $3) RETURNING id, name, email, created_at',
+      [name || null, email, password_hash]
     );
     const user = rows[0];
     res.status(201).json({ token: signToken(user), user });

@@ -25,6 +25,9 @@ export default function HomePage() {
           </button>
         ))}
       </div>
+      <button className={styles.cta} onClick={() => navigate('/register')}>
+        Get Started
+      </button>
     </div>
   );
 }
