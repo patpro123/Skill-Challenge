@@ -6,10 +6,13 @@ const schema = `
 
   CREATE TABLE IF NOT EXISTS users (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name VARCHAR(255),
     email TEXT UNIQUE NOT NULL,
     password_hash TEXT NOT NULL,
     created_at TIMESTAMPTZ DEFAULT now()
   );
+
+  ALTER TABLE users ADD COLUMN IF NOT EXISTS name VARCHAR(255);
 
   CREATE TABLE IF NOT EXISTS enrollments (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
